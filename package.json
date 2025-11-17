@@ -1,0 +1,11 @@
+{
+  "name": "knights-travails",
+  "version": "1.0.0",
+  "description": "Shortest knight path (BFS) exercise",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "author": "javiermondine",
+  "license": "MIT"
+}
