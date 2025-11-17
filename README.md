@@ -8,16 +8,22 @@ Usage:
 node main.js
 ```
 
-Example output:
+Example output (cartesian coords):
 
 ```
 You made it in 1 moves! Here's your path:
 [0,0] -> [1,2]
 ---
 You made it in 2 moves! Here's your path:
-[0,0] -> [1,2] -> [3,3]
+[0,0] -> [2,1] -> [3,3]
 ---
-...
 ```
 
-The `knightMoves(start, end)` function returns an array of positions in the form `[x,y]` representing the shortest path from `start` to `end`.
+You can also call the function with algebraic notation (e.g. `a1`, `h8`) by using the option `{ algebraic: true }`. The function now returns an object `{ moves, path }` where `path` is an array of `[x,y]` coordinates.
+
+API:
+- `knightMoves(start, end, options)` — returns `{ moves, path }` or `null` if no path (shouldn't happen on 8x8)
+	- `start`, `end`: arrays like `[x,y]` (0..7) or algebraic strings when `options.algebraic` is true
+	- `options`: `{ algebraic: boolean }
+
+Helpers exported in the module: `coordToAlgebraic`, `algebraicToCoord`.
